@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^4.23.2",
     "@clerk/nextjs": "^4.23.2",
+    "@clerk/themes": "^1.7.5",
     "@next/font": "^13.4.19",
     "@uploadthing/react": "^5.3.0",
     "autoprefixer": "10.4.15",
