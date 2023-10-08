@@ -10,6 +10,7 @@ import { SignOutButton, SignedIn, useAuth } from "@clerk/nextjs";
 function LeftSidebar() {
   const router = useRouter();
   const pathName = usePathname();
+  const {userId} = useAuth();
   return (
     <section className="custom-scrollbar leftsidebar bg-dark-2  ">
       <div className="flex w-full flex-1 flex-col gap-6 px-6 ">
@@ -17,6 +18,9 @@ function LeftSidebar() {
           const isActive =
             (pathName.includes(link.route) && link.route.length > 1) ||
             pathName === link.route;
+
+            if(link.rounte === '/profile') link.route = `${link.route}/${userId}`
+
           return (
             <Link
               href={link.route}

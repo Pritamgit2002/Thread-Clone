@@ -29,7 +29,7 @@ export const sidebarLinks = [
   },
   {
     imgURL: "/assets/user.svg",
-    route: "/profile",
+    route: "/profile/id",
     label: "Profile",
   },
 ];
